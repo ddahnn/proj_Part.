@@ -1,0 +1,7 @@
+[
+    { "nivel": 3, "minPontos": 200, "desconto": 15.0 },
+    { "nivel": 2, "minPontos": 100, "desconto": 10.0 },
+    { "nivel": 1, "minPontos": 50, "desconto": 5.0 },
+    { "nivel": 0, "minPontos": 0, "desconto": 0.0 }
+  ]
+  
