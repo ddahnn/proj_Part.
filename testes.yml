@@ -1,0 +1,27 @@
+name: Testes Automatizados
+
+# Quando o GitHub deve executar esse workflow:
+on:
+  push:
+    branches: [main]     # Quando fizer push na branch main
+  pull_request:
+    branches: [main]     # Ou quando abrir PR para main
+
+jobs:
+  test:
+    runs-on: ubuntu-latest  # Ambiente Linux atualizado
+
+    steps:
+      - name: Clonar repositório
+        uses: actions/checkout@v3
+
+      - name: Instalar Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+
+      - name: Instalar dependências
+        run: npm install
+
+      - name: Rodar os testes
+        run: npm test
